@@ -1,8 +1,8 @@
-// apps/blockchain/hardhat.config.ts
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
+// apps/blockchain/hardhat.config.cjs
+require("@nomicfoundation/hardhat-toolbox");
 
-const config: HardhatUserConfig = {
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
   solidity: "0.8.19",
   networks: {
     localhost: {
@@ -19,5 +19,3 @@ const config: HardhatUserConfig = {
     tests: "./test",
   },
 };
-
-export default config;
